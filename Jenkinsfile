@@ -48,7 +48,8 @@ pipeline{
             }
             steps{
                 sshagent(['shashwat']) {
-                sh "scp -o StrictHostKeyChecking=no  /var/lib/jenkins/workspace/Eval-Jenkins_Production/target/*.jar ubuntu@:/home/ubuntu/"
+                sh "scp -o StrictHostKeyChecking=no  /var/lib/jenkins/workspace/jenkinscapstone_Production/target/hello-0.0.1-SNAPSHOT.jar ubuntu@35.154.208.141:/home/ubuntu/"
+                sh "ssh java -jar file,jar &"
                 }
             }
         } 
